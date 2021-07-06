@@ -13,12 +13,18 @@ One of the methods is using the `async` boolean attribute. Take a look at the il
 
 ![async.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1625323434804/6HvWQ9QQB.png)
 
+
+> `<script async src="script.js">`
+
 When we use `async` along with `<script>`, the HTML parsing starts, and whenever `<script>` is encountered, HTML parsing is not paused. Javascript is fetched asynchronously along with HTML parsing. This reduces the loading time of the webpage, boosting its performance. After the script is fetched, only then the HTML parsing is paused and the Javascript is executed. After js execution, the HTML parsing is resumed. 
 
 ## Defer
 The second boolean attribute is `defer`.
 
 ![defer.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1625324328815/aypVrZSAq.png)
+
+> `<script defer src="script.js">`
+
 
 When we use `defer`, HTML parsing is never paused. So your entire web page is loaded first. If in the process of parsing HTML, `<script>` is encountered, then is fetched without pausing HTML parsing. After the entire HTML is parsed, the javascript is executed.
 
